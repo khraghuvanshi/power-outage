@@ -8,6 +8,22 @@ I will perform data cleaning and exploratory analysis on the data, and explore t
 
 Power outages are a common occurrence, especially during extreme weather events or infrastructure failures. These outages can disrupt daily life, impact businesses, and even pose safety risks. By predicting outage durations, stakeholders can plan for contingencies, optimize resources, and enhance the resilience of the power grid.
 
+The dataset has 1534 rows, corresponding to the number of outages, and 57 columns. I will only focus on the following columns for my analysis:
+
+| Columns | Description |
+| ----------- | ----------- |
+| U.S._STATE | Represents all the states in the continental U.S. |
+| NERC.REGION | The North American Electric Reliability Corporation (NERC) regions involved in the outage event |
+| CLIMATE.REGION | U.S. Climate regions as specified by National Centers for Environmental Information (9 regions)|
+| CLIMATE.CATEGORY | The climate episodes corresponding to the years with categories—“Warm”, “Cold” or “Normal” episodes of the climate based on a threshold of ± 0.5 °C ONI |
+| OUTAGE.START.DATE | This indicates the day of the year when the outage event started  |
+| OUTAGE.START.TIME | This indicates the time of the day when the outage event started  |
+| OUTAGE.RESTORATION.DATE | This indicates the day of the year when power was restored to all the customers |
+| OUTAGE.RESTORATION.TIME | This indicates the time of the day when power was restored to all the customers |
+| CAUSE.CATEGORY | Categories of all the events causing the major power outages |
+| OUTAGE.DURATION | Duration of outage events (in minutes) |
+| POPULATION |Population in the U.S. state in a year |
+
 ### Dataset Overview
 
 ## Data Cleaning and Exploratory Data Analysis
