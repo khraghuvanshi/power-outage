@@ -43,6 +43,7 @@ For the data cleaning part of the project, here are the following steps I took:
 These steps enhanced the dataset's usability, improved data quality, and provided additional context for exploratory analysis and machine learning.
 
 The first few rows of the dataset are shown below:
+
 | U.S._STATE   | NERC.REGION   | CLIMATE.REGION     | CLIMATE.CATEGORY   | CAUSE.CATEGORY     |   OUTAGE.DURATION |   POPULATION | OUTAGE.START        | OUTAGE.RESTORATION   | TIME.OF.DAY   |
 |:-------------|:--------------|:-------------------|:-------------------|:-------------------|------------------:|-------------:|:--------------------|:---------------------|:--------------|
 | Minnesota    | MRO           | East North Central | normal             | severe weather     |              3060 |      5348119 | 2011-07-01 17:00:00 | 2011-07-03 20:00:00  | Afternoon     |
