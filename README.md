@@ -157,6 +157,27 @@ This is a classification problem, specifically a multiclass classification probl
 The F1-score is chosen as the primary evaluation metric because the target classes (Short, Medium, Long) may not be balanced. The F1-score accounts for both precision and recall, ensuring that the model performs well across all classes rather than favoring the most frequent ones. 
 
 ## Baseline Model
+The baseline model is a Random Forest Classifier designed to predict the OUTAGE_DURATION_RANGE (Short, Medium, Long) using key features from the dataset. Random Forest was chosen for its robustness and ability to handle categorical and numerical data. 
+
+Model Features:
+
+- Nominal Features: `CAUSE.CATEGORY`, `U.S._STATE`, `CLIMATE.REGION`, `TIME.OF.DAY`
+- Ordinal Features: `CLIMATE.CATEGORY`
+  
+To prepare the data for the model, One-Hot Encoding was applied to all nominal features using a ColumnTransformer to convert these into binary indicator variables.
+
+The dataset was split into a training set (80%) and a test set (20%) using train_test_split with a random seed of 42 to ensure reproducibility. The baseline model was evaluated using the test set, and the performance was summarized using the classification report, which includes precision, recall, F1-score, and support for each class.
+
+The baseline model performed poorer than I expected, with an accuracy of 49%, and the following Classification Report:
+
+| Class    | Precision | Recall | F1-Score | Support |
+|----------|-----------|--------|----------|---------|
+| Long     | 0.37      | 0.51   | 0.43     | 76      |
+| Medium   | 0.54      | 0.54   | 0.54     | 106     |
+| Short    | 0.59      | 0.42   | 0.49     | 98      |
+| **Accuracy**       |           |        |          | **0.49** |
+| **Macro Avg**      | 0.50      | 0.49   | 0.49     | 280     |
+| **Weighted Avg**   | 0.51      | 0.49   | 0.49     | 280     |
 
 ## Final Model
 ## Fairness Analysis
