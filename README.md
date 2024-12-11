@@ -8,6 +8,8 @@ I will perform data cleaning and exploratory analysis on the data, and explore t
 
 Power outages are a common occurrence, especially during extreme weather events or infrastructure failures. These outages can disrupt daily life, impact businesses, and even pose safety risks. By predicting outage durations, stakeholders can plan for contingencies, optimize resources, and enhance the resilience of the power grid.
 
+### Dataset Overview
+
 The dataset has 1534 rows, corresponding to the number of outages, and 57 columns. I will only focus on the following columns for my analysis:
 
 | Columns | Description |
@@ -24,9 +26,8 @@ The dataset has 1534 rows, corresponding to the number of outages, and 57 column
 | OUTAGE.DURATION | Duration of outage events (in minutes) |
 | POPULATION |Population in the U.S. state in a year |
 
-### Dataset Overview
-
 ## Data Cleaning and Exploratory Data Analysis
+
 ## Assessment of Missingness
 ## Hypothesis Testing
 ## Framing a Prediction Problem
