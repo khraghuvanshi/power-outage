@@ -128,6 +128,22 @@ After doing the test, I got a P-value of 0.0. With a significant level of 0.05, 
 ></iframe>
 
 ## Hypothesis Testing
+I will be testing whether the outage duration is greater on average for outages occurring during the morning and night compared to those occurring in the afternoon and evening. The relevant columns for this test are `OUTAGE.DURATION` and `TIME.OF.DAY`. I will group the data into two categories: one containing outages during the morning and night, and the other containing outages during the afternoon and evening. Only outages with non-missing values for these columns will be used in the analysis.
+Null Hypothesis: On average, the outage duration in the morning and night is the same as afternoon and evening.
+Alternate Hypothesis: On average, the outage duration in the morning and night is more than afternoon and evening.
+Test Statistic: The test statistic used is the difference in mean outage durations between the two groups: Mean Duration (Morning/Night) − Mean Duration (Afternoon/Evening)
+This choice of test statistic is appropriate because it directly measures the difference in the central tendency (mean) of outage durations between the two groups, which aligns with the research question.
+Significance Level:
+A significance level of 0.05 is chosen, which is standard for hypothesis testing.
+After performing our hypothesis test, our P-value is 0.0021, and so we reject the null hypothesis. There is evidence that outage duration is more in the morning and night than in the afternoon and evening.
+<iframe
+  src="assets/hypothesis.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+
 ## Framing a Prediction Problem
 ## Baseline Model
 ## Final Model
