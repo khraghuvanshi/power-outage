@@ -53,22 +53,42 @@ The first few rows of the dataset are shown below:
 | Minnesota    | MRO           | East North Central | warm               | severe weather     |              1740 |      5489594 | 2015-07-18 02:00:00 | 2015-07-19 07:00:00  | Night         |
 
 ### Univariate Analysis
-In my exploratory data analysis, I first plot a scatterplot of the duration and its count to see any outliers and trends.
-
+In my exploratory data analysis, I first plot a scatterplot of the duration and its count to see any outliers and trends.We can see some outliers where the outage duration was above 60,000. There doesn't seem to be much pattern, most points are concentrated at lower outage durations. 
 <iframe
   src="assets/out_duration_dist.html"
   width="800"
   height="600"
   frameborder="0"
 ></iframe>
-
-We can see some outliers where the outage duration was above 60,000. There doesn't seem to be much pattern, most points are concentrated at lower outage durations. 
+Then I plotted the proportions of `CAUSE.CATEGORY` to see what causes outages the most. We can see that several weather causes the most outages, and islanding causes the least.
 <iframe
   src="assets/out_cause_cat.html"
   width="800"
   height="600"
   frameborder="0"
 ></iframe>
+
+### Bivariate Analysis
+Initially, I plotted multiple plots using 2 features. The most significant ones are as follows:
+
+I want to see the distribution of `U.S_STATE` and `OUTAGE.DURATION` on average, and if some regions had longer outages compared to others. To do this, I first grouped the dataframe by `U.S._STATE` and then calculated the average of `OUTAGE.DURATION`. Then I plotted a Geomap. We can see that eastern regions have longer outage duration.
+<iframe
+  src="assets/outage_duration_map.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+And so, I grouped the data by  `CLIMATE.REGION` and calculated the average of `OUTAGE.DURATION`. Then I plotted a barplot of the average outage duration, and we can see that East North Central region has the highest outage duration.
+<iframe
+  src="assets/clim_reg_bar.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+
+
 
 ## Assessment of Missingness
 
