@@ -149,8 +149,14 @@ After performing our hypothesis test, our P-value is 0.0021, and so we reject th
   frameborder="0"
 ></iframe>
 
-
 ## Framing a Prediction Problem
+My goal with my prediction model is to predict duration of outages (categorized into three levels: Short, Medium, and Long) based on several features such as `CLIMATE.REGION`, `CAUSE.CATEGORY`, `CLIMATE.CATEGORY`, `TIME.OF.DAY`, `U.S._STATE`, `NERC.REGION`, and `POPULATION`. These features were chosen because they are available at the time of prediction and are likely to influence the duration of power outages.
+
+This is a classification problem, specifically a multiclass classification problem, as the target variable, `OUTAGE_DURATION_RANGE`, has three possible categories. The target variable is  `OUTAGE_DURATION_RANGE`. 
+
+The F1-score is chosen as the primary evaluation metric because the target classes (Short, Medium, Long) may not be balanced. The F1-score accounts for both precision and recall, ensuring that the model performs well across all classes rather than favoring the most frequent ones. 
+
 ## Baseline Model
+
 ## Final Model
 ## Fairness Analysis
