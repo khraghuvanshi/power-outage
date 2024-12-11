@@ -96,6 +96,19 @@ I also wanted to see the distribution of `TIME.OF.DAY` and `OUTAGE.DURATION`, an
 ></iframe>
 
 ### Grouping
+For grouping, I wanted to To identify the causes of power outages that lead to the longest durations in specific climate regions. Through this table, we can see what were the major causes for each `CLIMATE.REGION`.
+
+| CLIMATE.REGION     |   equipment failure |   fuel supply emergency |   intentional attack |   islanding |   public appeal |   severe weather |   system operability disruption |
+|:-------------------|--------------------:|------------------------:|---------------------:|------------:|----------------:|-----------------:|--------------------------------:|
+| Central            |             322     |                 10035.2 |              490.25  |    125.333  |         1410    |          3299.63 |                        2695.2   |
+| East North Central |           26435.3   |                 33971.2 |             2501.11  |      1      |          733    |          4434.82 |                        2610     |
+| Northeast          |             269.75  |                 14629.6 |              264.68  |    881      |         2655    |          4429.9  |                         773.5   |
+| Northwest          |             702     |                     1   |              488.831 |     73.3333 |          898    |          4838    |                         141     |
+| South              |             295.778 |                 17482.5 |              337.667 |    493.5    |         1163.98 |          4391.35 |                         899.385 |
+| Southeast          |             554.5   |                   nan   |              504.667 |    nan      |         2865.4  |          2685.71 |                         180.6   |
+| Southwest          |             113.8   |                    76   |              274.678 |      2      |         2275    |         11572.9  |                         370.375 |
+| West               |             524.81  |                  6154.6 |              886.267 |    214.857  |         2028.11 |          2928.37 |                         363.667 |
+| West North Central |              61     |                   nan   |               47     |     68.2    |          439.5  |          2442.5  |                         nan     |
 
 ## Assessment of Missingness
 
