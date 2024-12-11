@@ -201,6 +201,7 @@ The best hyperparameters identified:
 
 The final model outperformed the baseline model with a new accuracy of 67%.
 In terms of overall metrics, here's the Classification Report:
+
 | Class    | Precision | Recall | F1-Score | Support |
 |----------|-----------|--------|----------|---------|
 | Long     | 0.66      | 0.74   | 0.70     | 84      |
