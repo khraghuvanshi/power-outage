@@ -87,8 +87,15 @@ And so, I grouped the data by  `CLIMATE.REGION` and calculated the average of `O
   frameborder="0"
 ></iframe>
 
+I also wanted to see the distribution of `TIME.OF.DAY` and `OUTAGE.DURATION`, and so I plotted a heatmap for it. We can see that **Afternoon** and **Morning** have a higher duration than **Evening** and **Night**. 
+<iframe
+  src="assets/time_heapmap.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
-
+### Grouping
 
 ## Assessment of Missingness
 
