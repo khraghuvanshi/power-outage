@@ -111,6 +111,21 @@ For grouping, I wanted to To identify the causes of power outages that lead to t
 | West North Central |              61     |                   nan   |               47     |     68.2    |          439.5  |          2442.5  |                         nan     |
 
 ## Assessment of Missingness
+Following are the columns that have missing values: `CLIMATE.REGION`, `CLIMATE.CATEGORY`, `OUTAGE.DURATION`, `OUTAGE.START`, `OUTAGE.RESTORATION`
+### NMAR Analysis
+Out of the columns with missing values, the only plausible one to be NMAR is `OUTAGE.DURATION` because  it might depend directly on the true values of the column. For instance, extremely short outages might not be recorded because they are considered insignificant or overlooked, while extremely long outages might be omitted due to data censoring, reporting biases, or logistical challenges in accurately documenting prolonged disruptions. But I will do permutation tests to see if it depends on any other column before concluding this.
+
+### MAR Analysis
+Null Hypothesis: The missingness of `OUTAGE.DURATION` column is independent on the `CLIMATE.REGION` column.
+Alternate Hypothesis: The missingness of `OUTAGE.DURATION` column is dependent on the `CLIMATE.REGION` column.
+I will perform a permutation test on `OUTAGE.DURATION` using the test statistic of Total Variation Distance (TVD). 
+After doing the test, I got a P-value of 0.0. With a significant level of 0.05, we can say that we reject the null. Therefore the missingness of `OUTAGE.DURATION` is dependent on `CLIMATE.REGION`, and its MAR.
+<iframe
+  src="assets/mar.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
 ## Hypothesis Testing
 ## Framing a Prediction Problem
