@@ -53,10 +53,18 @@ The first few rows of the dataset are shown below:
 | Minnesota    | MRO           | East North Central | warm               | severe weather     |              1740 |      5489594 | 2015-07-18 02:00:00 | 2015-07-19 07:00:00  | Night         |
 
 ### Univariate Analysis
-In my EDA, I first plot a scatterplot of the duration and its count to see any outliers, and trends.
+In my exploratory data analysis, I first plot a scatterplot of the duration and its count to see any outliers and trends.
 
 <iframe
   src="assets/out_duration_dist.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+We can see some outliers where the outage duration was above 60,000. There doesn't seem to be much pattern, most points are concentrated at lower outage durations. 
+<iframe
+  src="assets/out_cause_cat.html"
   width="800"
   height="600"
   frameborder="0"
