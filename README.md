@@ -212,3 +212,21 @@ In terms of overall metrics, here's the Classification Report:
 | **Weighted Avg**   | 0.66      | 0.67   | 0.66     | 279     |
 
 ## Fairness Analysis
+In this analysis, I will assess whether the model’s performance varies significantly across the different outage duration groups: Short, Medium, and Long. 
+The goal is to determine if the model performs fairly across these groups, meaning that it doesn't favor one group over another in terms of F1-score.
+
+Evaluation Metric: F1-score.
+The F1-score is chosen as the evaluation metric because it considers both precision and recall, making it a good choice when evaluating classification performance, especially when classes might be imbalanced.
+
+Null Hypothesis: The model’s performance (measured by the F1-score) does not vary significantly across the Short, Medium, and Long groups.
+
+Alternative Hypothesis: The model’s performance (measured by the F1-score) varies significantly across the Short, Medium, and Long groups.
+
+After doing the permutation test, we got a p-value of 0.0001, and so with a significance level of 0.05, we reject the null, indicating that the model’s performance does vary significantly across the groups.
+<iframe
+  src="assets/fairness.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
