@@ -44,13 +44,13 @@ These steps enhanced the dataset's usability, improved data quality, and provide
 
 The first few rows of the dataset are shown below:
 
-| U.S._STATE   | NERC.REGION   | CLIMATE.REGION     | CLIMATE.CATEGORY   | CAUSE.CATEGORY     |   OUTAGE.DURATION |   POPULATION | OUTAGE.START        | OUTAGE.RESTORATION   | TIME.OF.DAY   |
-|:-------------:|:--------------:|:-------------------|:-------------------|:-------------------|------------------:|-------------:|:--------------------|:---------------------|:--------------|
-| Minnesota    | MRO           | East North Central | normal             | severe weather     |              3060 |      5348119 | 2011-07-01 17:00:00 | 2011-07-03 20:00:00  | Afternoon     |
-| Minnesota    | MRO           | East North Central | normal             | intentional attack |                 1 |      5457125 | 2014-05-11 18:38:00 | 2014-05-11 18:39:00  | Evening       |
-| Minnesota    | MRO           | East North Central | cold               | severe weather     |              3000 |      5310903 | 2010-10-26 20:00:00 | 2010-10-28 22:00:00  | Evening       |
-| Minnesota    | MRO           | East North Central | normal             | severe weather     |              2550 |      5380443 | 2012-06-19 04:30:00 | 2012-06-20 23:00:00  | Night         |
-| Minnesota    | MRO           | East North Central | warm               | severe weather     |              1740 |      5489594 | 2015-07-18 02:00:00 | 2015-07-19 07:00:00  | Night         |
+| U.S._STATE   | NERC.REGION   | CAUSE.CATEGORY     |   OUTAGE.DURATION |   CUSTOMERS.AFFECTED | OUTAGE.START        |
+|:-------------|:--------------|:-------------------|------------------:|---------------------:|:--------------------|
+| Minnesota    | MRO           | severe weather     |              3060 |                70000 | 2011-07-01 17:00:00 |
+| Minnesota    | MRO           | intentional attack |                 1 |                  nan | 2014-05-11 18:38:00 |
+| Minnesota    | MRO           | severe weather     |              3000 |                70000 | 2010-10-26 20:00:00 |
+| Minnesota    | MRO           | severe weather     |              2550 |                68200 | 2012-06-19 04:30:00 |
+| Minnesota    | MRO           | severe weather     |              1740 |               250000 | 2015-07-18 02:00:00 |
 
 ## Assessment of Missingness
 ## Hypothesis Testing
