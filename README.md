@@ -180,4 +180,34 @@ The baseline model performed poorer than I expected, with an accuracy of 49%, an
 | **Weighted Avg**   | 0.51      | 0.49   | 0.49     | 280     |
 
 ## Final Model
+For my final model, I added `SEASON` as a feature by extracting the month from `OUTAGE.START`.  this feature captures the season in which the outage occurred (Winter, Spring, Summer, Fall). Seasonal variations often correlate with specific outage causes, such as severe weather in Winter or Summer storms. I used an additional feature `POPULATION` for this model as well.
+
+I also removed the outliers from `OUTAGE.DURATION` to not have baises in the prediction. 
+
+The final model used a Random Forest Classifier, an ensemble-based algorithm that combines multiple decision trees to improve predictive accuracy and reduce overfitting. Random Forest was chosen because:
+
+- It handles mixed data types (categorical and numerical) without extensive preprocessing.
+- It is robust to outliers and can model complex interactions between features.
+
+Hyperparameter tuning was performed using GridSearchCV with 5-fold cross-validation to optimize the following parameters:
+
+- n_estimators: Number of trees in the forest. Tested values: [100, 200].
+- max_depth: Maximum depth of the trees. Tested values: [None, 10, 20].
+- min_samples_split: Minimum number of samples required to split an internal node. Default value was used.
+The best hyperparameters identified:
+
+- n_estimators: 200
+- max_depth: 10
+
+The final model outperformed the baseline model with a new accuracy of 67%.
+In terms of overall metrics, here's the Classification Report:
+| Class    | Precision | Recall | F1-Score | Support |
+|----------|-----------|--------|----------|---------|
+| Long     | 0.66      | 0.74   | 0.70     | 84      |
+| Medium   | 0.63      | 0.47   | 0.54     | 96      |
+| Short    | 0.69      | 0.80   | 0.74     | 99      |
+| **Accuracy**       |           |        |          | **0.67** |
+| **Macro Avg**      | 0.66      | 0.67   | 0.66     | 279     |
+| **Weighted Avg**   | 0.66      | 0.67   | 0.66     | 279     |
+
 ## Fairness Analysis
